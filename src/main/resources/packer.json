@@ -1,0 +1,11 @@
+{
+  "_comment" : "Simple Packer Template using Amazon Linux 2",
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "us-east-1",
+    "source_ami": "ami-0de53d8956e8dcf80",
+    "instance_type": "t2.micro",
+    "ssh_username": "ec2-user",
+    "ami_name": "EdTest-{{user `Build`}}"
+  }]
+}
